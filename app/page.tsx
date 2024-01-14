@@ -34,7 +34,10 @@ export default function Page() {
             </a>
             <div className="flex gap-x-1 text-muted-foreground print:hidden">
               <Button className="size-8" variant="outline" size="icon" asChild>
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <a
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  aria-label={`Send a mail to ${RESUME_DATA.name}`}
+                >
                   <MailIcon className="size-4" />
                 </a>
               </Button>

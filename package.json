@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:write": "npx prettier . --write"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -14,14 +15,15 @@
     "next": "14.0.4"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   }
 }

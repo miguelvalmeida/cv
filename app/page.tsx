@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -32,7 +32,7 @@ export default function Page() {
               <GlobeIcon className="size-3" />
               {RESUME_DATA.location}
             </a>
-            <div className="flex gap-x-1 text-muted-foreground">
+            <div className="flex gap-x-1 text-muted-foreground print:hidden">
               <Button className="size-8" variant="outline" size="icon" asChild>
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <MailIcon className="size-4" />
@@ -49,10 +49,23 @@ export default function Page() {
                 </a>
               </Button>
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground">
-              <a href={`mailto:${RESUME_DATA.contact.email}`}>
+            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+              <p>
+                Email:{' '}
                 <span className="underline">{RESUME_DATA.contact.email}</span>
-              </a>
+              </p>
+              <p>
+                Github:{' '}
+                <span className="underline">
+                  {RESUME_DATA.contact.social.github}
+                </span>
+              </p>
+              <p>
+                LinkedIn:{' '}
+                <span className="underline">
+                  {RESUME_DATA.contact.social.linkedIn}
+                </span>
+              </p>
             </div>
           </div>
           <Avatar className="size-28 rounded-xl">
@@ -87,13 +100,8 @@ export default function Page() {
                 </div>
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="mt-2 text-xs flex flex-col gap-y-4 pt-2">
-                {work.projects.map((project) => (
-                  <div key={project.name}>
-                    <h5 className="font-bold">{project.name}</h5>
-                    <p>{project.description}</p>
-                  </div>
-                ))}
+              <CardContent className="mt-2 text-xs">
+                {work.description}
               </CardContent>
             </Card>
           ))}

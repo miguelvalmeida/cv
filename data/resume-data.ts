@@ -30,7 +30,8 @@ export const RESUME_DATA = {
       title: 'Front End Developer',
       start: '2018',
       end: '',
-      description: 'TBD',
+      description:
+        'Esse ut dolore elit officia cillum et veniam fugiat elit nostrud adipisicing sint duis consectetur. Laborum elit tempor minim eu. Commodo commodo veniam mollit commodo id qui in exercitation tempor. Consectetur voluptate veniam dolore et sunt cupidatat aliquip Lorem aute voluptate. Eiusmod eu excepteur qui anim laboris deserunt irure ullamco occaecat ex. Dolor culpa excepteur nulla fugiat consectetur id esse et consectetur deserunt.',
       projects: [
         {
           name: 'Trainline',

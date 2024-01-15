@@ -29,3 +29,7 @@ Built with Next.js and shadcn/ui.
 ## Credits
 
 [Bartosz Jarocki](https://github.com/BartoszJarocki/cv/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

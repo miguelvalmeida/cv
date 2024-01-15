@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { GlobeIcon, MailIcon } from 'lucide-react'
+import { ExternalLinkIcon, GlobeIcon, MailIcon } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
@@ -20,10 +20,6 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-6">
-        <div className="flex justify-end gap-x-2 print:hidden">
-          <Print />
-          <ThemeToggle />
-        </div>
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -96,11 +92,12 @@ export default function Page() {
                 <div className="flex items-center justify-between gap-x-2 text-base">
                   <h3 className="font-semibold leading-none">
                     <a
-                      className="hover:underline"
+                      className="hover:underline flex items-center gap-1"
                       href={work.link}
                       target="__blank"
                     >
                       {work.company}
+                      <ExternalLinkIcon className="size-4 print:hidden" />
                     </a>
                   </h3>
                   <div className="text-sm tabular-nums text-muted-foreground">
@@ -153,6 +150,10 @@ export default function Page() {
             ))}
           </ul>
         </section>
+        <footer className="flex justify-end gap-x-2 print:hidden">
+          <Print />
+          <ThemeToggle />
+        </footer>
       </section>
     </main>
   )

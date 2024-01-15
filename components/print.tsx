@@ -10,7 +10,7 @@ export function Print() {
       variant="outline"
       size="icon"
       className="size-8"
-      onClick={window?.print}
+      onClick={() => window.print()}
     >
       <PrinterIcon className="size-4" />
     </Button>

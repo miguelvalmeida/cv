@@ -7,6 +7,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { GitHubIcon } from '@/components/icons/github-icon'
 import { LinkedInIcon } from '@/components/icons/linkedin-icon'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { Print } from '@/components/print'
 import { RESUME_DATA } from '@/data/resume-data'
 
 export const metadata: Metadata = {
@@ -17,7 +19,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-6">
+        <div className="flex justify-end gap-x-2 print:hidden">
+          <Print />
+          <ThemeToggle />
+        </div>
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -97,7 +103,7 @@ export default function Page() {
                       {work.company}
                     </a>
                   </h3>
-                  <div className="text-sm tabular-nums text-gray-500">
+                  <div className="text-sm tabular-nums text-muted-foreground">
                     {work.start} - {work.end.length ? work.end : 'Present'}
                   </div>
                 </div>
@@ -116,7 +122,7 @@ export default function Page() {
               <h3 className="font-semibold leading-none">
                 {RESUME_DATA.education.university}
               </h3>
-              <div className="text-sm tabular-nums text-gray-500">
+              <div className="text-sm tabular-nums text-muted-foreground">
                 {RESUME_DATA.education.start} - {RESUME_DATA.education.end}
               </div>
             </CardHeader>
@@ -126,7 +132,7 @@ export default function Page() {
           </Card>
         </section>
         <section className="flex min-h-0 flex-col gap-y-3">
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">Skills & Technologies</h2>
           <ul className="flex flex-wrap gap-2">
             {RESUME_DATA.skills.map((skill) => (
               <li key={skill}>
@@ -141,7 +147,7 @@ export default function Page() {
             {RESUME_DATA.languages.map((language) => (
               <li key={language.name}>
                 <Badge variant="secondary">
-                  {language.name} {language.flag}
+                  {`${language.name} ${language.flag}`}
                 </Badge>
               </li>
             ))}

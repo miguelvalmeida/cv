@@ -46,7 +46,14 @@ export const RESUME_DATA = {
       ],
     },
   ],
-  skills: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js'],
+  skills: [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'Tailwind CSS',
+    'Node.js',
+  ],
   languages: [
     { name: 'Portuguese', flag: '🇵🇹' },
     { name: 'English', flag: '🇬🇧' },

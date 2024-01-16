@@ -75,7 +75,9 @@ export default function Page() {
           </div>
           <Avatar className="size-28 rounded-xl">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+            <AvatarFallback className="rounded-xl">
+              {RESUME_DATA.initials}
+            </AvatarFallback>
           </Avatar>
         </div>
         <section className="flex min-h-0 flex-col gap-y-3">

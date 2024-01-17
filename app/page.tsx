@@ -152,7 +152,7 @@ export default function Page() {
             ))}
           </ul>
         </section>
-        <footer className="flex justify-end gap-x-2 print:hidden">
+        <footer className="flex justify-end gap-x-2 print:hidden text-muted-foreground">
           <Print />
           <ThemeToggle />
         </footer>

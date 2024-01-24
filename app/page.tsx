@@ -1,5 +1,10 @@
 import type { Metadata } from 'next'
-import { ExternalLinkIcon, GlobeIcon, MailIcon } from 'lucide-react'
+import {
+  DownloadIcon,
+  ExternalLinkIcon,
+  GlobeIcon,
+  MailIcon,
+} from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
@@ -36,11 +41,11 @@ export default function Page() {
             </a>
             <div className="flex gap-x-1 text-muted-foreground print:hidden">
               <Button className="size-8" variant="outline" size="icon" asChild>
-                <a
-                  href={`mailto:${RESUME_DATA.contact.email}`}
-                  aria-label={`Send a mail to ${RESUME_DATA.name}`}
-                >
+                <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <MailIcon className="size-4" />
+                  <span className="sr-only">
+                    Send a mail to ${RESUME_DATA.name}
+                  </span>
                 </a>
               </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
@@ -132,27 +137,34 @@ export default function Page() {
         </section>
         <section className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Skills & Technologies</h2>
-          <ul className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {RESUME_DATA.skills.map((skill) => (
-              <li key={skill}>
-                <Badge>{skill}</Badge>
-              </li>
+              <Badge key={skill}>{skill}</Badge>
             ))}
-          </ul>
+          </div>
         </section>
         <section className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Languages</h2>
-          <ul className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {RESUME_DATA.languages.map((language) => (
-              <li key={language.name}>
-                <Badge variant="secondary">
-                  {`${language.name} ${language.flag}`}
-                </Badge>
-              </li>
+              <Badge
+                key={language.name}
+                variant="secondary"
+                className="flex gap-1"
+              >
+                <span>{language.name}</span>
+                <span className="print:hidden">{language.flag}</span>
+              </Badge>
             ))}
-          </ul>
+          </div>
         </section>
         <footer className="flex justify-end gap-x-2 print:hidden text-muted-foreground">
+          <Button className="size-8" variant="outline" size="icon" asChild>
+            <a href="/files/cv-miguelvalmeida.pdf" download>
+              <DownloadIcon className="size-4" />
+              <span className="sr-only">Download CV</span>
+            </a>
+          </Button>
           <Print />
           <ThemeToggle />
         </footer>

@@ -161,7 +161,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <footer className="flex justify-end gap-x-2 print:hidden text-muted-foreground">
+        <footer className="flex justify-end gap-x-1 print:hidden text-muted-foreground">
           <Button className="size-8" variant="outline" size="icon" asChild>
             <a href="/files/cv-miguelvalmeida.pdf" download>
               <DownloadIcon className="size-4" />

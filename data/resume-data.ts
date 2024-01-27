@@ -53,6 +53,7 @@ export const RESUME_DATA = {
     'Next.js',
     'Tailwind CSS',
     'Node.js',
+    'Playwright'
   ],
   languages: [
     { name: 'Portuguese', flag: '🇵🇹' },

@@ -30,11 +30,11 @@ export default function Page() {
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <a
               className="max-w-md pt-1 items-center text-pretty font-mono text-xs text-muted-foreground inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-              href={RESUME_DATA.locationLink}
+              href={RESUME_DATA.location.link}
               target="_blank"
             >
               <GlobeIcon className="size-3" />
-              {RESUME_DATA.location}
+              {RESUME_DATA.location.name}
             </a>
             <div className="flex gap-x-1 text-muted-foreground print:hidden">
               <Button className="size-8" variant="outline" size="icon" asChild>

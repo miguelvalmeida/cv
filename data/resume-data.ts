@@ -41,7 +41,7 @@ export const RESUME_DATA = {
         {
           name: 'Instant Group',
           description:
-            'Currently part of a team tasked with building a brand new website that will have the ability to search, book and manage workspaces. Using technologies such as TypeScript, Tailwind CSS and Next.js, we are leveraging the latest features in React such as React Server Components and Server Actions.',
+            'Working in a team with the goal of building a brand new website with the ability to search, book and manage workspaces. Using technologies like TypeScript, Tailwind CSS and Next.js, we are leveraging the latest features in React such as React Server Components and Server Actions.',
         },
       ],
     },
@@ -53,7 +53,7 @@ export const RESUME_DATA = {
     'Next.js',
     'Tailwind CSS',
     'Node.js',
-    'Playwright'
+    'Playwright',
   ],
   languages: [
     { name: 'Portuguese', flag: '🇵🇹' },

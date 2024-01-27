@@ -82,16 +82,16 @@ export default function Page() {
             </AvatarFallback>
           </Avatar>
         </div>
-        <section className="flex min-h-0 flex-col gap-y-3">
+        <section className="space-y-3">
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
         </section>
-        <section className="flex min-h-0 flex-col gap-y-3">
+        <section className="space-y-3">
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => (
-            <Card key={work.company}>
+            <Card key={work.company} className="space-y-2">
               <CardHeader>
                 <div className="flex items-center justify-between gap-x-2 text-base">
                   <h3 className="font-semibold leading-none">
@@ -110,7 +110,7 @@ export default function Page() {
                 </div>
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="mt-2 text-xs space-y-4">
+              <CardContent className="text-xs space-y-4">
                 <p>{work.description}</p>
                 {work.projects.map((project) => (
                   <div key={project.name} className="space-y-2">
@@ -122,9 +122,9 @@ export default function Page() {
             </Card>
           ))}
         </section>
-        <section className="flex min-h-0 flex-col gap-y-3">
+        <section className="space-y-3">
           <h2 className="text-xl font-bold">Education</h2>
-          <Card>
+          <Card className="space-y-2">
             <CardHeader className="flex flex-row items-center justify-between gap-x-2 text-base">
               <h3 className="font-semibold leading-none">
                 {RESUME_DATA.education.university}
@@ -133,12 +133,12 @@ export default function Page() {
                 {`${RESUME_DATA.education.start} - ${RESUME_DATA.education.end}`}
               </div>
             </CardHeader>
-            <CardContent className="mt-2">
+            <CardContent>
               <p>{RESUME_DATA.education.degree}</p>
             </CardContent>
           </Card>
         </section>
-        <section className="flex min-h-0 flex-col gap-y-3">
+        <section className="space-y-3">
           <h2 className="text-xl font-bold">Skills & Technologies</h2>
           <div className="flex flex-wrap gap-2">
             {RESUME_DATA.skills.map((skill) => (
@@ -146,7 +146,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section className="flex min-h-0 flex-col gap-y-3">
+        <section className="space-y-3">
           <h2 className="text-xl font-bold">Languages</h2>
           <div className="flex flex-wrap gap-2">
             {RESUME_DATA.languages.map((language) => (

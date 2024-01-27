@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { GitHubIcon } from '@/components/icons/github-icon'
+import { GithubIcon } from '@/components/icons/github-icon'
 import { LinkedInIcon } from '@/components/icons/linkedin-icon'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { Print } from '@/components/print'
@@ -28,9 +28,6 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
-            </p>
             <a
               className="max-w-md pt-1 items-center text-pretty font-mono text-xs text-muted-foreground inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
               href={RESUME_DATA.locationLink}
@@ -50,7 +47,7 @@ export default function Page() {
               </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
                 <a href={RESUME_DATA.contact.social.github} target="__blank">
-                  <GitHubIcon className="size-4" />
+                  <GithubIcon className="size-4" />
                 </a>
               </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
@@ -113,8 +110,14 @@ export default function Page() {
                 </div>
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="mt-2 text-xs">
-                {work.description}
+              <CardContent className="mt-2 text-xs space-y-4">
+                <p>{work.description}</p>
+                {work.projects.map((project) => (
+                  <div key={project.name} className="space-y-2">
+                    <h5 className="font-bold">{project.name}</h5>
+                    <p>{project.description}</p>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           ))}

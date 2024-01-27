@@ -41,7 +41,7 @@ export default function Page() {
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <MailIcon className="size-4" />
                   <span className="sr-only">
-                    Send a mail to ${RESUME_DATA.name}
+                    {`Send a mail to ${RESUME_DATA.name}`}
                   </span>
                 </a>
               </Button>
@@ -105,7 +105,7 @@ export default function Page() {
                     </a>
                   </h3>
                   <div className="text-sm tabular-nums text-muted-foreground">
-                    {work.start} - {work.end.length ? work.end : 'Present'}
+                    {`${work.start} - ${work.end.length ? work.end : 'Present'}`}
                   </div>
                 </div>
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
@@ -130,11 +130,11 @@ export default function Page() {
                 {RESUME_DATA.education.university}
               </h3>
               <div className="text-sm tabular-nums text-muted-foreground">
-                {RESUME_DATA.education.start} - {RESUME_DATA.education.end}
+                {`${RESUME_DATA.education.start} - ${RESUME_DATA.education.end}`}
               </div>
             </CardHeader>
             <CardContent className="mt-2">
-              {RESUME_DATA.education.degree}
+              <p>{RESUME_DATA.education.degree}</p>
             </CardContent>
           </Card>
         </section>

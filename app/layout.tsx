@@ -1,8 +1,7 @@
 import type { PropsWithChildren } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { Inter } from 'next/font/google'
-
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
 

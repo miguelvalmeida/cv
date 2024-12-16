@@ -11,9 +11,9 @@ export function Print() {
       size="icon"
       className="size-8"
       onClick={() => window.print()}
+      aria-label="Print CV"
     >
       <PrinterIcon className="size-4" />
-      <span className="sr-only">Print CV</span>
     </Button>
   )
 }

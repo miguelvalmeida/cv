@@ -171,9 +171,12 @@ export default function Page() {
         </section>
         <footer className="flex justify-end gap-x-1 print:hidden text-muted-foreground">
           <Button className="size-8" variant="outline" size="icon" asChild>
-            <a href="/files/cv-miguelvalmeida.pdf" download>
+            <a
+              href="/files/cv-miguelvalmeida.pdf"
+              download
+              aria-label="Download CV"
+            >
               <DownloadIcon className="size-4" />
-              <span className="sr-only">Download CV</span>
             </a>
           </Button>
           <Print />

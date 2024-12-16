@@ -38,20 +38,28 @@ export default function Page() {
             </a>
             <div className="flex gap-x-1 text-muted-foreground print:hidden">
               <Button className="size-8" variant="outline" size="icon" asChild>
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <a
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  aria-label={`Send an email to ${RESUME_DATA.name}`}
+                >
                   <MailIcon className="size-4" />
-                  <span className="sr-only">
-                    {`Send a mail to ${RESUME_DATA.name}`}
-                  </span>
                 </a>
               </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
-                <a href={RESUME_DATA.contact.social.github} target="__blank">
+                <a
+                  href={RESUME_DATA.contact.social.github}
+                  target="__blank"
+                  aria-label="Visit my Github profile"
+                >
                   <GithubIcon className="size-4" />
                 </a>
               </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
-                <a href={RESUME_DATA.contact.social.linkedIn} target="__blank">
+                <a
+                  href={RESUME_DATA.contact.social.linkedIn}
+                  target="__blank"
+                  aria-label="Visit my LinkedIn profile"
+                >
                   <LinkedInIcon className="size-4" />
                 </a>
               </Button>

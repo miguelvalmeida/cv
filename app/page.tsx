@@ -40,7 +40,7 @@ export default function Page() {
               <Button className="size-8" variant="outline" size="icon" asChild>
                 <a
                   href={`mailto:${RESUME_DATA.contact.email}`}
-                  aria-label={`Send an email to ${RESUME_DATA.name}`}
+                  aria-label="Send me an email"
                 >
                   <MailIcon className="size-4" />
                 </a>

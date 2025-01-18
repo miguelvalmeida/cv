@@ -120,10 +120,10 @@ export default function Page() {
               </CardHeader>
               <CardContent className="text-xs space-y-4">
                 <p>{work.description}</p>
-                {work.projects.map((project) => (
-                  <div key={project.name} className="space-y-2">
-                    <h5 className="font-bold">{project.name}</h5>
-                    <p>{project.description}</p>
+                {work.clients.map((client) => (
+                  <div key={client.name} className="space-y-2">
+                    <h5 className="font-bold">{client.name}</h5>
+                    <p>{client.description}</p>
                   </div>
                 ))}
               </CardContent>

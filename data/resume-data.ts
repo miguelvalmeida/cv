@@ -5,11 +5,10 @@ export const RESUME_DATA = {
     name: 'Porto, Portugal',
     link: 'https://www.google.com/maps/place/porto',
   },
-  position: 'Front End Developer',
+  position: 'Front-end developer',
   summary:
-    'As a Front End Developer with over 5 years of experience, my current focus revolves around TypeScript and React. I actively stay updated with the latest trends in the Front End world and enjoy experimenting with new technologies to continuously enhance my skills.',
+    'As a front-end developer with 5+ years of experience, i focus on Typescript and React. I’m passionate about building clean, intuitive, and responsive user interfaces. I like to keep up with front-end trends and try out new tech to level up my skills.',
   avatarUrl: 'https://github.com/miguelvalmeida.png',
-  personalWebsiteUrl: 'https://miguelvalmeida.me',
   contact: {
     email: 'miguelvalmeida26@gmail.com',
     social: {
@@ -27,12 +26,12 @@ export const RESUME_DATA = {
     {
       company: 'Mindera',
       link: 'https://mindera.com/',
-      title: 'Front End Developer',
+      title: 'Front-end developer',
       start: '2018',
       end: '',
       description:
-        'I have been in Mindera for more than 5 years now and, since then, I have had the chance to work for companies like Trainline and Instant Group.',
-      projects: [
+        'I have been in Mindera for more than 5 years now and, since then, I have had the chance to work for clients like Trainline and Instant Group.',
+      clients: [
         {
           name: 'Trainline',
           description:
@@ -47,7 +46,6 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    'JavaScript',
     'TypeScript',
     'React',
     'Next.js',

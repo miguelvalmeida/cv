@@ -7,10 +7,9 @@ export const RESUME_DATA = {
   },
   position: 'Front-end developer',
   summary:
-    'As a front-end developer with 5+ years of experience, i focus on Typescript and React. I’m passionate about building clean, intuitive, and responsive user interfaces. I like to keep up with front-end trends and try out new tech to level up my skills.',
+    'Front-end developer with 6+ years of experience working mostly with Typescript and Next.js. Experienced in implementing designs, optimizing web performance and managing state for scalable, maintainable applications. I keep up with the latest front-end trends and explore new tools to continually expand my skill set.',
   avatarUrl: 'https://github.com/miguelvalmeida.png',
   contact: {
-    email: 'miguelvalmeida26@gmail.com',
     social: {
       github: 'https://github.com/miguelvalmeida',
       linkedIn: 'https://www.linkedin.com/in/miguelvalmeida',
@@ -30,29 +29,22 @@ export const RESUME_DATA = {
       start: '2018',
       end: '',
       description:
-        'I have been in Mindera for more than 5 years now and, since then, I have had the chance to work for clients like Trainline and Instant Group.',
+        'At Mindera, i’ve had the opportunity to work with clients like Trainline and Instant Group, contributing to various projects to meet client goals and requirements.',
       clients: [
         {
           name: 'Trainline',
           description:
-            'Worked across various teams and parts of the business helping to build new features, ranging from the main train ticket-selling website, to the post-sales and help desk websites. I worked mostly with TypeScript, React, Redux and Node.js.',
+            'Worked for 5 years across multiple teams, ranging from the main train ticket-selling site to post-sales and help desk platforms. Primarily worked with Typescript, React, Redux, and Node.js.',
         },
         {
           name: 'Instant Group',
           description:
-            'Working in a team with the goal of building a brand new website with the ability to search, book and manage workspaces. Using technologies like TypeScript, Tailwind CSS and Next.js, we are leveraging the latest features in React such as React Server Components and Server Actions.',
+            'Working in a team to build a new website for searching, booking and managing workspaces. Using technologies like TypeScript, Tailwind CSS and Next.js, we are leveraging the latest features in React such as React Server Components and Server Actions.',
         },
       ],
     },
   ],
-  skills: [
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Tailwind CSS',
-    'Node.js',
-    'Playwright',
-  ],
+  skills: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Node.js'],
   languages: [
     { name: 'Portuguese', flag: '🇵🇹' },
     { name: 'English', flag: '🇬🇧' },

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-6">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -37,14 +37,6 @@ export default function Page() {
               {RESUME_DATA.location.name}
             </a>
             <div className="flex gap-x-1 text-muted-foreground print:hidden">
-              <Button className="size-8" variant="outline" size="icon" asChild>
-                <a
-                  href={`mailto:${RESUME_DATA.contact.email}`}
-                  aria-label="Send me an email"
-                >
-                  <MailIcon className="size-4" />
-                </a>
-              </Button>
               <Button className="size-8" variant="outline" size="icon" asChild>
                 <a
                   href={RESUME_DATA.contact.social.github}
@@ -65,10 +57,6 @@ export default function Page() {
               </Button>
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              <p>
-                Email:{' '}
-                <span className="underline">{RESUME_DATA.contact.email}</span>
-              </p>
               <p>
                 Github:{' '}
                 <span className="underline">
@@ -92,7 +80,7 @@ export default function Page() {
         </div>
         <section className="space-y-3">
           <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <p className="text-pretty font-mono text-sm print:text-xs text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
         </section>

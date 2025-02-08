@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.3",
@@ -30,8 +35,6 @@
     "@types/react-dom": "^19.0.3",
     "@tailwindcss/postcss": "^4.0.4",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.20.0",
-    "eslint-config-next": "^15.1.6",
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "tailwindcss": "^4.0.4",

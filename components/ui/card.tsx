@@ -2,37 +2,25 @@ import type * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
-const Card = ({
-  className,
-  ref,
-  ...props
-}: React.ComponentPropsWithRef<'div'>) => (
+const Card = ({ className, ...props }: React.ComponentProps<'div'>) => (
   <div
-    ref={ref}
+    data-slot="card"
     className={cn('rounded-lg bg-card text-card-foreground', className)}
     {...props}
   />
 )
 
-const CardHeader = ({
-  className,
-  ref,
-  ...props
-}: React.ComponentPropsWithRef<'div'>) => (
+const CardHeader = ({ className, ...props }: React.ComponentProps<'div'>) => (
   <div
-    ref={ref}
+    data-slot="card-header"
     className={cn('flex flex-col space-y-1.5', className)}
     {...props}
   />
 )
 
-const CardTitle = ({
-  className,
-  ref,
-  ...props
-}: React.ComponentPropsWithRef<'h3'>) => (
+const CardTitle = ({ className, ...props }: React.ComponentProps<'h3'>) => (
   <h3
-    ref={ref}
+    data-slot="card-title"
     className={cn(
       'text-2xl font-semibold leading-none tracking-tight',
       className
@@ -43,23 +31,18 @@ const CardTitle = ({
 
 const CardDescription = ({
   className,
-  ref,
   ...props
-}: React.ComponentPropsWithRef<'p'>) => (
+}: React.ComponentProps<'p'>) => (
   <p
-    ref={ref}
+    data-slot="card-description"
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
   />
 )
 
-const CardContent = ({
-  className,
-  ref,
-  ...props
-}: React.ComponentPropsWithRef<'div'>) => (
+const CardContent = ({ className, ...props }: React.ComponentProps<'div'>) => (
   <div
-    ref={ref}
+    data-slot="card-content"
     className={cn(
       'text-pretty font-mono text-sm text-muted-foreground',
       className
@@ -68,12 +51,12 @@ const CardContent = ({
   />
 )
 
-const CardFooter = ({
-  className,
-  ref,
-  ...props
-}: React.ComponentPropsWithRef<'div'>) => (
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
+const CardFooter = ({ className, ...props }: React.ComponentProps<'div'>) => (
+  <div
+    data-slot="card-footer"
+    className={cn('flex items-center', className)}
+    {...props}
+  />
 )
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
